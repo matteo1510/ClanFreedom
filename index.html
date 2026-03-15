@@ -1,21 +1,167 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clan Freedom - Autofinanziamento</title>
+<title>Clan Freedom 🌿 - Autofinanziamento</title>
+<style>
+/* ===== FONT & BODY ===== */
+body{
+  font-family:'Poppins',sans-serif;
+  margin:0;
+  background:#0b1a0f;
+  color:white;
+  overflow-x:hidden;
+}
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+/* ===== NAVBAR ===== */
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px;
+  background:rgba(0,0,0,0.6);
+  position:fixed;
+  width:100%;
+  z-index:1000;
+}
+.navbar ul{
+  display:flex;
+  gap:15px;
+  list-style:none;
+  flex-wrap:wrap;
+}
+.navbar a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
 
+/* ===== HERO ===== */
+.hero{
+  height:80vh;
+  position:relative;
+  background:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.7)),url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  overflow:hidden;
+}
+.hero h1{font-size:32px; margin-bottom:10px;}
+.hero p{font-size:16px; margin-bottom:15px;}
+.btn{
+  background:#3fa34d;
+  padding:12px 20px;
+  border-radius:25px;
+  text-decoration:none;
+  color:white;
+  font-size:14px;
+  transition:0.3s;
+}
+.btn:hover{background:#2e6b3a;}
+
+/* ===== SECTIONS ===== */
+section{
+  padding:60px 20px;
+  max-width:1000px;
+  margin:auto;
+}
+h2{color:#3fa34d; margin-bottom:20px; text-align:center;}
+
+/* ===== CARDS ===== */
+.cards{
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.card{
+  background:#1e2c22;
+  padding:20px;
+  border-radius:15px;
+  flex:1 1 200px;
+  transition:transform 0.3s, box-shadow 0.3s;
+  transform-style: preserve-3d;
+}
+.card:hover{
+  transform:rotateY(10deg) rotateX(6deg) translateY(-8px);
+  box-shadow:0 20px 30px rgba(0,0,0,0.5);
+}
+
+/* ===== GALLERY ===== */
+.gallery{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  justify-content:center;
+}
+.gallery img{
+  width:100%;
+  max-width:150px;
+  border-radius:8px;
+  transition:transform 0.3s;
+}
+.gallery img:hover{transform:scale(1.1);}
+
+/* ===== COUNTER ===== */
+.counter{text-align:center; margin-top:20px;}
+.number{font-size:36px; color:#3fa34d; margin:10px 0;}
+
+/* ===== PULSANTI APP ===== */
+.store-buttons{text-align:center; margin-top:15px;}
+.store-buttons button{
+  margin:5px;
+  padding:12px 20px;
+  border:none;
+  border-radius:10px;
+  background:#3fa34d;
+  color:white;
+  cursor:pointer;
+  font-size:14px;
+  transition:0.3s;
+}
+.store-buttons button:hover{background:#2e6b3a;}
+
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:15px;
+  background:#111;
+  font-size:12px;
+}
+
+/* ===== FADE-IN ===== */
+.fade-in{opacity:0; transform:translateY(20px); transition:1s;}
+.fade-in.show{opacity:1; transform:translateY(0);}
+
+/* ===== CANVAS FOGLIE E PETALI ===== */
+canvas#leaves{
+  position:absolute;
+  top:0; left:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width:600px){
+  .hero h1{font-size:26px;}
+  .hero p{font-size:14px;}
+  .card{flex:1 1 100%;}
+  .gallery img{max-width:100px;}
+}
+</style>
 </head>
 
 <body>
 
-<!-- Navbar -->
 <nav class="navbar">
-  <div class="logo">Clan Freedom</div>
+  <div class="logo">🌿 Clan Freedom 🌿</div>
   <ul>
     <li><a href="#chi">Chi siamo</a></li>
     <li><a href="#perche">Perché</a></li>
@@ -24,54 +170,45 @@
   </ul>
 </nav>
 
-<!-- Hero -->
 <header class="hero">
   <div class="hero-text">
-    <h1>Aiuta il Clan Freedom</h1>
-    <p>Acquistando una piantina sostieni le attività del nostro clan scout.</p>
-    <a href="#perche" class="btn">Scopri di più</a>
+    <h1>Aiuta il Clan Freedom 🌱</h1>
+    <p>Acquistando una piantina sostieni le attività del nostro clan scout 🏕️</p>
+    <a href="#perche" class="btn">Scopri di più ✨</a>
   </div>
   <canvas id="leaves"></canvas>
 </header>
 
-<!-- Chi siamo -->
 <section id="chi" class="fade-in">
-<h2>Chi siamo</h2>
-<p>
-Siamo il <b>Clan Freedom</b> del gruppo scout Latina 6
-della parrocchia Sacro Cuore. Viviamo il servizio, la strada e la comunità.
-</p>
+<h2>Chi siamo 😊</h2>
+<p>Siamo il <b>Clan Freedom</b> del gruppo scout Latina 6 della parrocchia Sacro Cuore. Viviamo il servizio, la strada e la comunità. Attraverso attività e campi cresciamo insieme 🌟.</p>
 </section>
 
-<!-- Perché raccogliamo fondi -->
 <section id="perche" class="cards fade-in">
-<h2>Perché raccogliamo fondi</h2>
-<div class="card"> <h3>Campi scout</h3><p>Esperienze di strada, natura e comunità.</p> </div>
-<div class="card"> <h3>Attività educative</h3><p>Laboratori e momenti di crescita personale.</p> </div>
-<div class="card"> <h3>Materiale</h3><p>Tende, attrezzature e materiali per le attività del clan.</p> </div>
+<h2>Perché raccogliamo fondi 💚</h2>
+<div class="card"><h3>Campi scout 🏕️</h3><p>Esperienze di strada, natura e comunità.</p></div>
+<div class="card"><h3>Attività educative 🎨</h3><p>Laboratori e momenti di crescita personale.</p></div>
+<div class="card"><h3>Materiale 🛠️</h3><p>Tende, attrezzature e materiali per le attività del clan.</p></div>
 </section>
 
-<!-- Galleria -->
 <section id="foto" class="fade-in">
-<h2>Il nostro gruppo</h2>
+<h2>Il nostro gruppo 📸</h2>
 <div class="gallery">
-<img src="img/foto1.jpg">
-<img src="img/foto2.jpg">
-<img src="img/foto3.jpg">
+<img src="https://images.unsplash.com/photo-1554469380-5e001e3c7f76?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400">
+<img src="https://images.unsplash.com/photo-1507504031001-0d1a4b4c2f2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400">
+<img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=400">
 </div>
 </section>
 
-<!-- Contatore -->
 <section class="counter fade-in">
-<h2>Grazie per il vostro supporto</h2>
+<h2>Grazie per il vostro supporto 🎉</h2>
 <div class="number" id="counter">0</div>
-<p>piantine vendute</p>
+<p>Piantine vendute 🌱</p>
 </section>
 
-<!-- App per la piantina -->
 <section id="cura" class="fade-in">
-<h2>Prenditi cura della tua piantina</h2>
-<p>Scarica un'app che ti aiuta a riconoscere e curare la tua pianta.</p>
+<h2>Prenditi cura della tua piantina 🌸</h2>
+<p>Scarica un'app che ti aiuta a riconoscere e curare la tua pianta 📱</p>
 <div class="store-buttons">
 <button id="android">Google Play</button>
 <button id="ios">Apple Store</button>
@@ -79,9 +216,81 @@ della parrocchia Sacro Cuore. Viviamo il servizio, la strada e la comunità.
 </section>
 
 <footer>
-<p>Clan Freedom • Gruppo Scout Latina 6</p>
+<p>Clan Freedom • Gruppo Scout Latina 6 🏕️</p>
 </footer>
 
-<script src="script.js"></script>
+<script>
+// ===== CONTATORE GLOBALE CON JSONBIN.IO =====
+const BIN_ID = "IL_TUO_ID_BIN"; // sostituisci
+const API_KEY = "LA_TUA_MASTER_KEY"; // sostituisci
+const counterEl = document.getElementById("counter");
+
+function incrementCounter(){
+  fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}/latest`,{
+    headers:{"X-Master-Key":API_KEY}
+  }).then(res=>res.json())
+  .then(data=>{
+    let value = data.record.count || 0;
+    let current = 0;
+    const step = Math.ceil((value+1)/50); // animazione contatore
+    const interval = setInterval(()=>{
+      current += step;
+      if(current >= value+1){
+        current = value+1;
+        clearInterval(interval);
+      }
+      counterEl.innerText = current;
+    },30);
+    value += 1;
+    fetch(`https://api.jsonbin.io/v3/b/${BIN_ID}`,{
+      method:"PUT",
+      headers:{"Content-Type":"application/json","X-Master-Key":API_KEY},
+      body:JSON.stringify({count:value})
+    });
+  }).catch(err=>{counterEl.innerText="N/A"; console.error(err);});
+}
+window.addEventListener("load", incrementCounter);
+
+// ===== PULSANTI APP =====
+document.getElementById("android").onclick = ()=>window.open("https://play.google.com/store/apps/details?id=com.floraincognita.app.floraincognita");
+document.getElementById("ios").onclick = ()=>window.open("https://apps.apple.com/app/flora-incognita/id1297860122");
+
+// ===== FADE-IN SCROLL =====
+const faders = document.querySelectorAll(".fade-in");
+window.addEventListener("scroll",()=>{
+  faders.forEach(el=>{
+    const top=el.getBoundingClientRect().top;
+    const trigger=window.innerHeight-100;
+    if(top<trigger) el.classList.add("show");
+  });
+});
+
+// ===== FOGLIE E PETALI ANIMATI =====
+const canvas = document.getElementById("leaves");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+let leaves=[];
+for(let i=0;i<70;i++){
+  leaves.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*10+3,speed:Math.random()*1+0.5,angle:Math.random()*2*Math.PI,color:Math.random()>0.7?'#ffb6c1':'#3fa34d'});
+}
+function drawLeaves(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  leaves.forEach(l=>{
+    ctx.beginPath();
+    ctx.arc(l.x,l.y,l.r,0,2*Math.PI);
+    ctx.fillStyle = l.color;
+    ctx.fill();
+    l.y+=l.speed;
+    l.x+=Math.sin(l.angle);
+    l.angle+=0.02;
+    if(l.y>canvas.height) l.y=-10;
+    if(l.x>canvas.width) l.x=0;
+  });
+  requestAnimationFrame(drawLeaves);
+}
+drawLeaves();
+window.addEventListener("resize",()=>{canvas.width=window.innerWidth; canvas.height=window.innerHeight;});
+</script>
 </body>
 </html>
