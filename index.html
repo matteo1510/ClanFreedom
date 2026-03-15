@@ -1,87 +1,154 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clan Freedom - Autofinanziamento</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clan Freedom - Latina 6 ⚜️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #004a99; /* Blu Scout */
+            --secondary: #ffcc00; /* Giallo Scout */
+            --accent: #2ecc71; /* Verde Natura */
+            --dark: #2c3e50;
+        }
 
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark);
+            overflow-x: hidden;
+        }
+
+        /* --- Header con Animazione --- */
+        header {
+            height: 60vh;
+            background: linear-gradient(rgba(0, 74, 153, 0.8), rgba(0, 74, 153, 0.8)), 
+                        url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1000'); /* Immagine montagna random */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+            animation: fadeInDown 1.5s ease-out;
+        }
+
+        header h1 { font-size: 3.5rem; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; }
+        header p { font-size: 1.5rem; opacity: 0.9; }
+
+        /* --- Container Principale --- */
+        .main-content {
+            max-width: 900px;
+            margin: -50px auto 50px;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s forwards;
+            animation-delay: 0.5s;
+        }
+
+        .card:nth-child(2) { animation-delay: 0.8s; }
+        .card:nth-child(3) { animation-delay: 1.1s; }
+
+        h2 { color: var(--primary); margin-bottom: 20px; display: flex; align-items: center; gap: 10px; }
+
+        /* --- Sezione Soldi (Emoji List) --- */
+        ul { list-style: none; }
+        li { margin: 15px 0; font-size: 1.1rem; display: flex; align-items: center; gap: 10px; }
+        
+        /* --- Pulsante App (Effetto Hover) --- */
+        .app-section {
+            background: var(--dark);
+            color: white;
+            text-align: center;
+        }
+
+        .btn-app {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 18px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(46, 204, 113, 0.3);
+        }
+
+        .btn-app:hover {
+            transform: scale(1.1) rotate(-2deg);
+            background: #27ae60;
+        }
+
+        /* --- Animazioni --- */
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer { text-align: center; padding: 40px; color: #666; font-weight: bold; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 { font-size: 2rem; }
+            .main-content { margin-top: -30px; }
+        }
+    </style>
 </head>
-
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="logo">Clan Freedom</div>
-  <ul>
-    <li><a href="#chi">Chi siamo</a></li>
-    <li><a href="#perche">Perché</a></li>
-    <li><a href="#foto">Il nostro clan</a></li>
-    <li><a href="#cura">La tua piantina</a></li>
-  </ul>
-</nav>
-
-<!-- Hero -->
-<header class="hero">
-  <div class="hero-text">
-    <h1>Aiuta il Clan Freedom</h1>
-    <p>Acquistando una piantina sostieni le attività del nostro clan scout.</p>
-    <a href="#perche" class="btn">Scopri di più</a>
-  </div>
-  <canvas id="leaves"></canvas>
+<header>
+    <h1>CLAN FREEDOM ⚜️</h1>
+    <p>Latina 6 • Sacro Cuore ❤️</p>
 </header>
 
-<!-- Chi siamo -->
-<section id="chi" class="fade-in">
-<h2>Chi siamo</h2>
-<p>
-Siamo il <b>Clan Freedom</b> del gruppo scout Latina 6
-della parrocchia Sacro Cuore. Viviamo il servizio, la strada e la comunità.
-</p>
-</section>
+<div class="main-content">
+    
+    <div class="card">
+        <h2>🚀 Chi Siamo?</h2>
+        <p>Siamo i rover e le scolte del <strong>Latina 6</strong>! Il nostro Clan non è solo un gruppo, è una famiglia che cammina sulla <strong>Strada</strong>, vive la <strong>Comunità</strong> e si sporca le mani nel <strong>Servizio</strong>. Siamo pronti a cambiare il mondo, un passo alla volta! 🌍👣</p>
+    </div>
 
-<!-- Perché raccogliamo fondi -->
-<section id="perche" class="cards fade-in">
-<h2>Perché raccogliamo fondi</h2>
-<div class="card"> <h3>Campi scout</h3><p>Esperienze di strada, natura e comunità.</p> </div>
-<div class="card"> <h3>Attività educative</h3><p>Laboratori e momenti di crescita personale.</p> </div>
-<div class="card"> <h3>Materiale</h3><p>Tende, attrezzature e materiali per le attività del clan.</p> </div>
-</section>
+    <div class="card">
+        <h2>💰 Obiettivo Autofinanziamento</h2>
+        <p>Perché stiamo raccogliendo fondi? Perché vogliamo sognare in grande e farlo con le nostre forze! I vostri contributi andranno per:</p>
+        <ul>
+            <li>🏔️ <strong>La Route Estiva:</strong> Per zaino in spalla e chilometri di bellezza.</li>
+            <li>⛺ <strong>Materiale Tecnico:</strong> Tende nuove per non dormire sotto la pioggia!</li>
+            <li>🤝 <strong>Progetti Sociali:</strong> Per sostenere le nostre attività di volontariato.</li>
+        </ul>
+    </div>
 
-<!-- Galleria -->
-<section id="foto" class="fade-in">
-<h2>Il nostro gruppo</h2>
-<div class="gallery">
-<img src="img/foto1.jpg">
-<img src="img/foto2.jpg">
-<img src="img/foto3.jpg">
+    <div class="card app-section">
+        <h2>🌿 Cura le tue Piante</h2>
+        <p>Oltre allo scoutismo, amiamo il pianeta. Abbiamo creato questo collegamento speciale per aiutarti a far crescere il tuo pollice verde! 🪴</p>
+        <a href="LINK_APP_PIANTE" class="btn-app">📲 Apri l'App Piante</a>
+    </div>
+
 </div>
-</section>
-
-<!-- Contatore -->
-<section class="counter fade-in">
-<h2>Grazie per il vostro supporto</h2>
-<div class="number" id="counter">0</div>
-<p>piantine vendute</p>
-</section>
-
-<!-- App per la piantina -->
-<section id="cura" class="fade-in">
-<h2>Prenditi cura della tua piantina</h2>
-<p>Scarica un'app che ti aiuta a riconoscere e curare la tua pianta.</p>
-<div class="store-buttons">
-<button id="android">Google Play</button>
-<button id="ios">Apple Store</button>
-</div>
-</section>
 
 <footer>
-<p>Clan Freedom • Gruppo Scout Latina 6</p>
+    <p>Fatto con ❤️ dal Clan Freedom | Estote Parati! ⚜️</p>
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>
