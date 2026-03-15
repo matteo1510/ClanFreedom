@@ -1,69 +1,115 @@
 body{
 
-font-family: 'Montserrat', sans-serif;
-
+font-family:Poppins;
 margin:0;
-
-background:#f4f7f4;
-
-color:#333;
-
-}
-
-
-header{
-
-background:#2e6b3a;
-
+background:#0f1a13;
 color:white;
 
-text-align:center;
+}
 
-padding:40px 20px;
+
+.navbar{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px;
+background:rgba(0,0,0,0.5);
+position:fixed;
+width:100%;
+z-index:1000;
+
+}
+
+.navbar ul{
+
+display:flex;
+gap:20px;
+list-style:none;
+
+}
+
+.navbar a{
+
+color:white;
+text-decoration:none;
 
 }
 
 
-h1{
+.hero{
 
-margin:0;
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.7)),
+url("https://images.unsplash.com/photo-forest");
 
-font-size:40px;
+background-size:cover;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+
+}
+
+
+.hero h1{
+
+font-size:60px;
+
+}
+
+
+.btn{
+
+background:#3fa34d;
+padding:15px 25px;
+border-radius:30px;
+text-decoration:none;
+color:white;
 
 }
 
 
 section{
 
-padding:40px 20px;
-
-max-width:900px;
-
+padding:80px 20px;
+max-width:1000px;
 margin:auto;
 
 }
 
 
-h2{
-
-color:#2e6b3a;
-
-}
-
-
-ul{
-
-padding-left:20px;
-
-}
-
-
-.gallery .images{
+.cards{
 
 display:flex;
+gap:30px;
+flex-wrap:wrap;
 
+}
+
+
+.card{
+
+background:#1e2c22;
+padding:25px;
+border-radius:15px;
+flex:1;
+transition:transform 0.3s;
+
+}
+
+
+.card:hover{
+
+transform:translateY(-10px);
+
+}
+
+
+.gallery{
+
+display:flex;
 gap:20px;
-
 flex-wrap:wrap;
 
 }
@@ -72,38 +118,36 @@ flex-wrap:wrap;
 .gallery img{
 
 width:100%;
-
-max-width:400px;
-
+max-width:300px;
 border-radius:10px;
 
 }
 
 
-button{
+.counter{
 
-background:#3a8d4b;
-
-color:white;
-
-border:none;
-
-padding:15px 25px;
-
-font-size:16px;
-
-border-radius:8px;
-
-cursor:pointer;
-
-margin-top:10px;
+text-align:center;
 
 }
 
 
-button:hover{
+.number{
 
-background:#2e6b3a;
+font-size:60px;
+color:#3fa34d;
+
+}
+
+
+.store-buttons button{
+
+margin:10px;
+padding:15px 25px;
+border:none;
+border-radius:10px;
+background:#3fa34d;
+color:white;
+cursor:pointer;
 
 }
 
@@ -111,31 +155,7 @@ background:#2e6b3a;
 footer{
 
 text-align:center;
-
 padding:20px;
-
-background:#e5e5e5;
-
-margin-top:40px;
-
-}
-
-
-.note{
-
-font-size:14px;
-
-opacity:0.7;
-
-}
-
-
-@media (max-width:600px){
-
-h1{
-
-font-size:28px;
-
-}
+background:#111;
 
 }
