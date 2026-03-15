@@ -1,132 +1,118 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Sito di prova</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            margin:0;
-            background:#f4f4f4;
-        }
+<title>Clan Freedom - Autofinanziamento</title>
 
-        header{
-            background:#333;
-            color:white;
-            padding:20px;
-            text-align:center;
-        }
+<link rel="stylesheet" href="style.css">
 
-        nav{
-            background:#555;
-            padding:10px;
-            text-align:center;
-        }
-
-        nav a{
-            color:white;
-            margin:15px;
-            text-decoration:none;
-            font-weight:bold;
-        }
-
-        nav a:hover{
-            color:yellow;
-        }
-
-        .container{
-            width:80%;
-            margin:auto;
-            padding:20px;
-            background:white;
-        }
-
-        .card{
-            background:#eee;
-            padding:20px;
-            margin:15px 0;
-            border-radius:10px;
-        }
-
-        footer{
-            background:#333;
-            color:white;
-            text-align:center;
-            padding:10px;
-            margin-top:20px;
-        }
-
-        input, textarea{
-            width:100%;
-            padding:10px;
-            margin-top:10px;
-        }
-
-        button{
-            margin-top:10px;
-            padding:10px 20px;
-            background:#333;
-            color:white;
-            border:none;
-        }
-
-        button:hover{
-            background:#555;
-        }
-    </style>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
 <header>
-    <h1>Il mio sito di prova</h1>
-    <p>Un semplice sito HTML per fare esperimenti</p>
+
+<h1>Clan Freedom</h1>
+
+<p>Gruppo Scout Latina 6 - Parrocchia Sacro Cuore</p>
+
 </header>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Chi siamo</a>
-    <a href="#">Servizi</a>
-    <a href="#">Contatti</a>
-</nav>
 
-<div class="container">
+<section class="intro">
 
-    <div class="card">
-        <h2>Benvenuto</h2>
-        <p>Questo è un sito di prova creato in HTML. Puoi modificarlo per imparare a programmare siti web.</p>
-    </div>
+<h2>Chi siamo</h2>
 
-    <div class="card">
-        <h2>Immagine di esempio</h2>
-        <img src="https://picsum.photos/600/300" width="100%">
-    </div>
+<p>
+Siamo il <b>Clan Freedom</b> del gruppo scout Latina 6 della parrocchia Sacro Cuore.
+Come scout crediamo nella comunità, nel servizio e nel costruire qualcosa di bello insieme.
+</p>
 
-    <div class="card">
-        <h2>Contattaci</h2>
+<p>
+Per questo organizziamo attività, campi e progetti che ci aiutano a crescere come persone
+e a vivere pienamente l'esperienza scout.
+</p>
 
-        <form>
-            <label>Nome</label>
-            <input type="text" placeholder="Inserisci il tuo nome">
+</section>
 
-            <label>Email</label>
-            <input type="email" placeholder="Inserisci la tua email">
 
-            <label>Messaggio</label>
-            <textarea rows="5" placeholder="Scrivi il tuo messaggio"></textarea>
+<section class="fundraising">
 
-            <button type="submit">Invia</button>
-        </form>
+<h2>Perché vendiamo piantine</h2>
 
-    </div>
+<p>
+Questa iniziativa di autofinanziamento ci permette di sostenere le nostre attività:
+</p>
+
+<ul>
+
+<li>campi scout</li>
+
+<li>attività educative</li>
+
+<li>materiale per il clan</li>
+
+</ul>
+
+<p>
+Acquistando una piantina non stai solo prendendo una pianta,
+ma stai contribuendo a sostenere il nostro percorso scout.
+</p>
+
+</section>
+
+
+<section class="gallery">
+
+<h2>Il nostro gruppo</h2>
+
+<div class="images">
+
+<img src="img/foto1.jpg" alt="foto clan">
+
+<img src="img/foto2.jpg" alt="foto clan">
 
 </div>
 
+<p class="note">
+(le immagini verranno aggiunte dal nostro gruppo)
+</p>
+
+</section>
+
+
+<section class="plantcare">
+
+<h2>Come prenderti cura della tua piantina</h2>
+
+<p>
+Vuoi sapere come prenderti cura della tua piantina?
+Puoi utilizzare una delle migliori app per la cura delle piante.
+</p>
+
+<button id="appButton">
+Scopri l'app per curare la tua pianta
+</button>
+
+</section>
+
+
 <footer>
-    <p>© 2026 Sito di prova</p>
+
+<p>
+Clan Freedom • Gruppo Scout Latina 6
+</p>
+
 </footer>
 
+
+<script src="script.js"></script>
+
 </body>
+
 </html>
