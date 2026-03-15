@@ -9,10 +9,10 @@
 body{
   font-family:'Poppins',sans-serif;
   margin:0;
-  background: linear-gradient(135deg,#ff9e5c,#ffb97c); /* sfondo arancione sfumato */
-  color:#1a3d7c; /* testo blu scuro */
+  background:#ff9e5c; /* sfondo arancione puro */
+  color:#1a3d7c;
   overflow-x:hidden;
-  text-align:center; /* paragrafi centrati */
+  text-align:center;
 }
 
 /* ===== NAVBAR ===== */
@@ -21,7 +21,7 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:15px;
-  background:rgba(255,255,255,0.2);
+  background:rgba(255,255,255,0.5); /* meno trasparente */
   position:fixed;
   width:100%;
   z-index:1000;
@@ -42,7 +42,7 @@ body{
 .hero{
   height:80vh;
   position:relative;
-  background:linear-gradient(rgba(255,200,150,0.4),rgba(255,180,100,0.7)),url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080');
+  background:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080');
   background-size:cover;
   background-position:center;
   display:flex;
@@ -55,7 +55,7 @@ body{
 .hero h1{font-size:32px; margin-bottom:10px;}
 .hero p{font-size:16px; margin-bottom:15px;}
 .btn{
-  background:#1a3d7c; /* blu scuro */
+  background:#1a3d7c;
   padding:12px 20px;
   border-radius:25px;
   text-decoration:none;
@@ -81,7 +81,7 @@ h2{color:#123060; margin-bottom:20px; text-align:center;}
   justify-content:center;
 }
 .card{
-  background:#ffe6cc; /* arancione chiaro per card */
+  background:#ffe6cc;
   color:#1a3d7c;
   padding:20px;
   border-radius:15px;
@@ -124,6 +124,25 @@ h2{color:#123060; margin-bottom:20px; text-align:center;}
 }
 .store-buttons button:hover{background:#123060;}
 
+/* ===== NOME E ICONA APP ===== */
+.app-info{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:10px;
+}
+.app-info img{
+  width:60px;
+  height:60px;
+  border-radius:12px;
+  margin-bottom:5px;
+}
+.app-info span{
+  font-size:14px;
+  color:#1a3d7c;
+  font-weight:bold;
+}
+
 /* ===== FOOTER ===== */
 footer{
   text-align:center;
@@ -152,6 +171,7 @@ canvas#leaves{
   .hero p{font-size:14px;}
   .card{flex:1 1 100%;}
   .gallery img{max-width:100px;}
+  .app-info img{width:50px; height:50px;}
 }
 </style>
 </head>
@@ -204,6 +224,11 @@ canvas#leaves{
 <div class="store-buttons">
 <button id="android">Google Play</button>
 <button id="ios">Apple Store</button>
+</div>
+
+<div class="app-info">
+  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis4-ssl.mzstatic.com%2Fimage%2Fthumb%2FPurple122%2Fv4%2F2c%2Fa6%2Fe6%2F2ca6e68a-ba14-400a-c666-bc1ea0ac7882%2FAppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png%2F512x512bb.jpg&f=1&nofb=1&ipt=c10ada38da6e5cf8664362831d52f3522db3d13c554bb08d8cb8e26039378d51" alt="Flora App">
+  <span>Flora Incognita</span>
 </div>
 </section>
 
