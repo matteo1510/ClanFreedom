@@ -21,7 +21,7 @@ body{
   justify-content:space-between;
   align-items:center;
   padding:15px;
-  background:rgba(255,255,255,0.5); /* meno trasparente */
+  background:#ffffff; /* completamente opaca */
   position:fixed;
   width:100%;
   z-index:1000;
@@ -103,11 +103,13 @@ h2{color:#123060; margin-bottom:20px; text-align:center;}
 }
 .gallery img{
   width:100%;
-  max-width:150px;
+  max-width:200px; /* più grandi */
+  height:200px; /* quadrate */
+  object-fit:cover;
   border-radius:8px;
   transition:transform 0.3s;
 }
-.gallery img:hover{transform:scale(1.1);}
+.gallery img:hover{transform:scale(1.05);}
 
 /* ===== PULSANTI APP ===== */
 .store-buttons{text-align:center; margin-top:15px;}
@@ -124,12 +126,12 @@ h2{color:#123060; margin-bottom:20px; text-align:center;}
 }
 .store-buttons button:hover{background:#123060;}
 
-/* ===== NOME E ICONA APP ===== */
+/* ===== NOME E ICONA APP SOPRA I PULSANTI ===== */
 .app-info{
   display:flex;
   flex-direction:column;
   align-items:center;
-  margin-top:10px;
+  margin-bottom:10px;
 }
 .app-info img{
   width:60px;
@@ -141,6 +143,7 @@ h2{color:#123060; margin-bottom:20px; text-align:center;}
   font-size:14px;
   color:#1a3d7c;
   font-weight:bold;
+  margin-bottom:5px;
 }
 
 /* ===== FOOTER ===== */
@@ -170,7 +173,7 @@ canvas#leaves{
   .hero h1{font-size:26px;}
   .hero p{font-size:14px;}
   .card{flex:1 1 100%;}
-  .gallery img{max-width:100px;}
+  .gallery img{max-width:150px; height:150px;}
   .app-info img{width:50px; height:50px;}
 }
 </style>
@@ -212,23 +215,24 @@ canvas#leaves{
 <section id="foto" class="fade-in">
 <h2>Il nostro gruppo 📸</h2>
 <div class="gallery">
-<img src="img/WhatsApp Image 2026-03-15 at 14.21.14.jpeg" alt="Foto Clan Freedom 1">
-<img src="img/WhatsApp Image 2026-03-15 at 14.21.15 (1).jpeg" alt="Foto Clan Freedom 1">
-<img src="img/WhatsApp Image 2026-03-15 at 14.21.15.jpeg" alt="Foto Clan Freedom 1"
+<img src="img/foto1.jpg" alt="Foto Clan Freedom 1">
+<img src="img/foto2.jpg" alt="Foto Clan Freedom 2">
+<img src="img/foto3.jpg" alt="Foto Clan Freedom 3">
 </div>
 </section>
 
 <section id="cura" class="fade-in">
 <h2>Prenditi cura della tua piantina 🌸</h2>
 <p>Scarica un'app che ti aiuta a riconoscere e curare la tua pianta 📱</p>
+
+<div class="app-info">
+  <img src="img/flora-icon.png" alt="Flora App">
+  <span>Flora Incognita</span>
+</div>
+
 <div class="store-buttons">
 <button id="android">Google Play</button>
 <button id="ios">Apple Store</button>
-</div>
-
-<div class="app-info">
-  <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis4-ssl.mzstatic.com%2Fimage%2Fthumb%2FPurple122%2Fv4%2F2c%2Fa6%2Fe6%2F2ca6e68a-ba14-400a-c666-bc1ea0ac7882%2FAppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png%2F512x512bb.jpg&f=1&nofb=1&ipt=c10ada38da6e5cf8664362831d52f3522db3d13c554bb08d8cb8e26039378d51" alt="Flora App">
-  <span>Flora Incognita</span>
 </div>
 </section>
 
@@ -258,7 +262,7 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 let leaves=[];
 for(let i=0;i<70;i++){
-  leaves.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*10+3,speed:Math.random()*1+0.5,angle:Math.random()*2*Math.PI,color:Math.random()>0.7?'#ffb6c1':'#ff8000'});
+  leaves.push({x:Math.random()*canvas.width,y:Math.random()*canvas.height,r:Math.random()*10+3,speed:Math.random()*1+0.5,angle:Math.random()*2*Math.PI,color:Math.random()>0.7?'#ffb6c1':'#ff8000'});  
 }
 function drawLeaves(){
   ctx.clearRect(0,0,canvas.width,canvas.height);
