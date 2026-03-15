@@ -1,1 +1,132 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Sito di prova</title>
 
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin:0;
+            background:#f4f4f4;
+        }
+
+        header{
+            background:#333;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        nav{
+            background:#555;
+            padding:10px;
+            text-align:center;
+        }
+
+        nav a{
+            color:white;
+            margin:15px;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        nav a:hover{
+            color:yellow;
+        }
+
+        .container{
+            width:80%;
+            margin:auto;
+            padding:20px;
+            background:white;
+        }
+
+        .card{
+            background:#eee;
+            padding:20px;
+            margin:15px 0;
+            border-radius:10px;
+        }
+
+        footer{
+            background:#333;
+            color:white;
+            text-align:center;
+            padding:10px;
+            margin-top:20px;
+        }
+
+        input, textarea{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+        }
+
+        button{
+            margin-top:10px;
+            padding:10px 20px;
+            background:#333;
+            color:white;
+            border:none;
+        }
+
+        button:hover{
+            background:#555;
+        }
+    </style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Il mio sito di prova</h1>
+    <p>Un semplice sito HTML per fare esperimenti</p>
+</header>
+
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Chi siamo</a>
+    <a href="#">Servizi</a>
+    <a href="#">Contatti</a>
+</nav>
+
+<div class="container">
+
+    <div class="card">
+        <h2>Benvenuto</h2>
+        <p>Questo è un sito di prova creato in HTML. Puoi modificarlo per imparare a programmare siti web.</p>
+    </div>
+
+    <div class="card">
+        <h2>Immagine di esempio</h2>
+        <img src="https://picsum.photos/600/300" width="100%">
+    </div>
+
+    <div class="card">
+        <h2>Contattaci</h2>
+
+        <form>
+            <label>Nome</label>
+            <input type="text" placeholder="Inserisci il tuo nome">
+
+            <label>Email</label>
+            <input type="email" placeholder="Inserisci la tua email">
+
+            <label>Messaggio</label>
+            <textarea rows="5" placeholder="Scrivi il tuo messaggio"></textarea>
+
+            <button type="submit">Invia</button>
+        </form>
+
+    </div>
+
+</div>
+
+<footer>
+    <p>© 2026 Sito di prova</p>
+</footer>
+
+</body>
+</html>
