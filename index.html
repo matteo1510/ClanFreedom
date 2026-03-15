@@ -4,163 +4,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Clan Freedom - Autofinanziamento</title>
 
 <link rel="stylesheet" href="style.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
+<!-- Navbar -->
 <nav class="navbar">
-
-<div class="logo">Clan Freedom</div>
-
-<ul>
-<li><a href="#chi">Chi siamo</a></li>
-<li><a href="#perche">Perché</a></li>
-<li><a href="#foto">Il nostro clan</a></li>
-<li><a href="#cura">La tua piantina</a></li>
-</ul>
-
+  <div class="logo">Clan Freedom</div>
+  <ul>
+    <li><a href="#chi">Chi siamo</a></li>
+    <li><a href="#perche">Perché</a></li>
+    <li><a href="#foto">Il nostro clan</a></li>
+    <li><a href="#cura">La tua piantina</a></li>
+  </ul>
 </nav>
 
-
+<!-- Hero -->
 <header class="hero">
-
-<div class="hero-text">
-
-<h1>Aiuta il Clan Freedom</h1>
-
-<p>
-Acquistando una piantina sostieni le attività
-del nostro clan scout.
-</p>
-
-<a href="#perche" class="btn">Scopri di più</a>
-
-</div>
-
+  <div class="hero-text">
+    <h1>Aiuta il Clan Freedom</h1>
+    <p>Acquistando una piantina sostieni le attività del nostro clan scout.</p>
+    <a href="#perche" class="btn">Scopri di più</a>
+  </div>
+  <canvas id="leaves"></canvas>
 </header>
 
-
-<section id="chi">
-
+<!-- Chi siamo -->
+<section id="chi" class="fade-in">
 <h2>Chi siamo</h2>
-
 <p>
 Siamo il <b>Clan Freedom</b> del gruppo scout Latina 6
-della parrocchia Sacro Cuore.
-
-Il clan è il momento del cammino scout dedicato ai ragazzi
-più grandi, dove si vive il servizio, la strada e la comunità.
-
-Attraverso attività, campi e progetti
-cresciamo insieme e cerchiamo di lasciare il mondo
-un po’ migliore di come lo abbiamo trovato.
+della parrocchia Sacro Cuore. Viviamo il servizio, la strada e la comunità.
 </p>
-
 </section>
 
-
-<section id="perche" class="cards">
-
+<!-- Perché raccogliamo fondi -->
+<section id="perche" class="cards fade-in">
 <h2>Perché raccogliamo fondi</h2>
-
-<div class="card">
-
-<h3>Campi scout</h3>
-
-<p>
-Per vivere esperienze di strada,
-natura e comunità.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Attività educative</h3>
-
-<p>
-Laboratori, uscite e momenti
-di crescita personale.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Materiale</h3>
-
-<p>
-Tende, attrezzature e materiali
-per le attività del clan.
-</p>
-
-</div>
-
+<div class="card"> <h3>Campi scout</h3><p>Esperienze di strada, natura e comunità.</p> </div>
+<div class="card"> <h3>Attività educative</h3><p>Laboratori e momenti di crescita personale.</p> </div>
+<div class="card"> <h3>Materiale</h3><p>Tende, attrezzature e materiali per le attività del clan.</p> </div>
 </section>
 
-
-<section id="foto">
-
+<!-- Galleria -->
+<section id="foto" class="fade-in">
 <h2>Il nostro gruppo</h2>
-
 <div class="gallery">
-
 <img src="img/foto1.jpg">
 <img src="img/foto2.jpg">
 <img src="img/foto3.jpg">
-
 </div>
-
 </section>
 
-
-<section class="counter">
-
+<!-- Contatore -->
+<section class="counter fade-in">
 <h2>Grazie per il vostro supporto</h2>
-
 <div class="number" id="counter">0</div>
-
 <p>piantine vendute</p>
-
 </section>
 
-
-<section id="cura">
-
+<!-- App per la piantina -->
+<section id="cura" class="fade-in">
 <h2>Prenditi cura della tua piantina</h2>
-
-<p>
-Scarica un'app che ti aiuta a riconoscere
-e curare la tua pianta.
-</p>
-
+<p>Scarica un'app che ti aiuta a riconoscere e curare la tua pianta.</p>
 <div class="store-buttons">
-
 <button id="android">Google Play</button>
-
 <button id="ios">Apple Store</button>
-
 </div>
-
 </section>
-
 
 <footer>
-
 <p>Clan Freedom • Gruppo Scout Latina 6</p>
-
 </footer>
 
-
 <script src="script.js"></script>
-
 </body>
-
 </html>
